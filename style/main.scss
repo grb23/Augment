@@ -1,0 +1,105 @@
+//screen resolution
+$screen-height: 100vh;
+$screen-width: 100vw;
+
+$half-screen-height: 50vh;
+$half-screen-width: 50vw;
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid > .row {
+  margin: 0;
+}
+
+.container-fluid > .row > .col-md-12 {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row-flex {
+  width: 100%;
+}
+
+.fullSizeLogo {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+}
+
+.arrow {
+  height: 30px;
+  width: 100%;
+  animation: arrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-color: blue;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-30px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+.triangleLogo {
+  margin-top: 50px;
+  height: 200px;
+  width: 100%;
+  background-color: blue;
+}
+
+.introText {
+  text-align: left;
+  background-color: blue;
+}
+
+.quickLinks {
+  width: 100%;
+  text-align: center;
+}
+
+.link-wrapper {
+  margin-bottom: 20px;
+}
+
+.portfoliosLink {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.exhibitionLink {
+  width: 100%;
+}
+
+.aboutLink {
+  width: 100%;
+}
