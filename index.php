@@ -1,2 +1,2 @@
-<?php echo file_get_contents("header.html"); ?>
-<?php echo file_get_contents("augment.html"); ?>
+<?php echo file_get_contents("home/header.html"); ?>
+<?php echo file_get_contents("home/body.html"); ?>
