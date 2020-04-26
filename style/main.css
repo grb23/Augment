@@ -2,6 +2,26 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-image: url("../images/desktop-background.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.background {
+  background-image: url("../images/desktop-background.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.background-white {
+  background-image: url("../images/desktop-background-white.jpg") !important;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -30,8 +50,68 @@ a:hover {
   width: 100%;
 }
 
+.page {
+  display: none;
+}
+
+.pageFade {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.nav-dark {
+  color: #181a46 !important;
+  opacity: 0.5;
+}
+
+.nav-dark:hover {
+  opacity: 0.75;
+}
+
+.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.last-port-item {
+  margin-right: auto !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 0px) {
+  #loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .loadingTriangle {
+    width: 600px;
+    height: auto;
+  }
+
   .navbar-collapse.collapse.in {
     display: block !important;
   }
@@ -39,6 +119,36 @@ a:hover {
   .navbar {
     margin-top: 0px;
     position: absolute;
+    padding: 0 !important;
+  }
+
+  .navbar-nav {
+    padding-left: 20px;
+  }
+
+  .navbar-toggler {
+    padding: 40px 40px 0;
+  }
+
+  .nav-logo {
+    width: 40px;
+  }
+
+  .navbar-light .navbar-toggler {
+    border: none !important;
+  }
+
+  .navbar-dark .navbar-toggler {
+    border: none !important;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(24, 26, 70, 0.95);
+    padding: 20px;
+  }
+
+  .navbar-collapse-dark {
+    background-color: rgba(255, 255, 255, 0.95);
   }
 
   .nav-link {
@@ -58,17 +168,16 @@ a:hover {
 
   .fullSizeLogo {
     width: 100%;
-    height: 100px;
-    background-color: blue;
+    height: auto;
   }
 
   .arrow {
-    height: 30px;
-    width: 100%;
+    height: 15px;
+    width: auto;
+    margin: auto;
     animation: arrow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    background-color: blue;
   }
 
   @keyframes arrow {
@@ -90,19 +199,40 @@ a:hover {
   }
   .triangleLogo {
     margin-top: 50px;
-    height: 200px;
+    height: auto;
     width: 100%;
-    background-color: blue;
+    padding: 50px;
+    margin: auto;
+  }
+
+  .introTitle {
+    margin-top: -10vh;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
   }
 
   .introText {
-    text-align: left;
-    background-color: blue;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    margin-top: 1em;
+    line-height: 1.5em;
   }
 
   .quickLinks {
     text-align: center;
     width: 100%;
+    font-weight: 500;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
   }
 
   .link-wrapper {
@@ -112,56 +242,466 @@ a:hover {
 
   .portfoliosLink {
     padding: 8px 16px;
-    background-color: white;
+    color: white;
+    transition: 0.1s;
+    padding: 0 0 6px;
   }
 
   .exhibitionLink {
     padding: 8px 16px;
-    background-color: white;
+    color: white;
+    transition: 0.1s;
+    padding: 0 0 6px;
   }
 
   .aboutLink {
     padding: 8px 28px;
-    background-color: white;
+    color: white;
+    transition: 0.1s;
+    padding: 0 0 6px;
+  }
+
+  .portfoliosLink:hover, .aboutLink:hover, .exhibitionLink:hover {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+
+  .whoWeAre {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 300px;
   }
 
   .whoWeAreImg {
-    background-color: blue;
+    background-image: url("../images/1.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    color: #181a46;
+  }
+
+  .whoWeAreTitle {
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 5vh;
   }
 
   .whoWeAreText {
-    background-color: blue;
+    font-weight: 300;
+    font-size: 0.8em;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    margin-top: 1em;
+  }
+
+  .whatIsAugment {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .whatIsAugmentTitle {
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  .whatIsAugmentText {
+    width: 100%;
+    font-weight: 300;
+    font-size: 0.8em;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    margin-top: 1em;
+  }
+
+  .whatIsAugmentImg {
+    background-image: url("../images/1.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    color: #181a46;
+  }
+
+  .processSlider {
+    display: flex;
+    width: 100%;
+  }
+
+  .slick-dots {
+    transform: translateY(-300px);
+  }
+
+  .slider-wrapper {
+    height: 100% !important;
+  }
+
+  .sliderPhoto-wrapper {
+    width: 100%;
+    height: 600px !important;
+    overflow: hidden;
+  }
+
+  .sliderPhoto {
+    width: 100%;
+    height: auto;
+  }
+
+  .slick-prev {
+    display: none !important;
+  }
+
+  .slick-next {
+    display: none !important;
+  }
+
+  .slideTitle-wrapper {
+    margin-top: 400px;
+    margin-bottom: 20px;
+  }
+
+  .slideTitle {
+    font-weight: 500;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: center;
+  }
+
+  .slideDate {
+    position: relative;
+    padding: 0;
+    z-index: 100;
+    font-weight: 400;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: white;
+    margin-bottom: 2em;
+  }
+
+  .slideCaption {
+    position: relative;
+    padding: 0;
+    z-index: 100;
+    text-align: left;
+    font-weight: 300;
+    font-size: 0.8em;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    margin-top: -265px;
+  }
+
+  .highlightReelTitle {
+    margin-top: 400px;
+    margin-bottom: 2em;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    z-index: 100;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: white;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .hide-medium {
+    display: none;
+  }
+
+  .weAreAugment {
+    margin-top: 12vh;
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolios {
+    margin-top: 20% !important;
+  }
+
+  .port-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    align-self: center;
+    position: absolute;
+    width: 50px;
+    height: auto;
+  }
+
+  .portfolioImg-wrapper {
+    width: 35vw !important;
+    height: 35vw;
+    background-color: rgba(24, 26, 70, 0.15);
+    margin: auto;
+    margin-bottom: 50px;
+    transition: 0.7s;
+    padding: 0;
+  }
+
+  .portfolioImg {
+    opacity: 0.05;
+    background-image: url("../images/G_Brunot_fav.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.7s;
+  }
+
+  .portfolioImg-wrapper:hover {
+    background-color: rgba(24, 26, 70, 0.85);
+  }
+  .portfolioImg-wrapper:hover .logo {
+    opacity: 1;
+  }
+  .portfolioImg-wrapper:hover .portfolioImg {
+    opacity: 0.2;
+  }
+
+  .UA-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .UA_logo {
+    position: relative;
+    width: 150px;
+    height: auto;
+    padding: 20px;
+    align-self: center;
+  }
+
+  .UA_logo:hover {
+    cursor: pointer;
+  }
+
+  .copywrite {
+    padding: 5px;
+    text-align: center;
+    font-size: 0.8em;
+    opacity: 0.5;
+    margin: auto;
+  }
+
+  .socials {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .social-media-logo {
+    opacity: 0.5;
+    width: 40px;
+    height: auto;
+    padding: 10px;
+    transition: 0.2s;
+  }
+
+  .social-media-logo:hover {
+    opacity: 1;
+    cursor: pointer;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .hide-medium {
+    display: block !important;
+  }
+
+  .slideTitle-wrapper {
+    margin-bottom: 0;
+  }
+
+  .portfolios {
+    margin-top: 10% !important;
+  }
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .whoWeAre {
+    justify-content: end;
+    margin-top: 0;
+  }
+
+  .whoWeAreTitle {
+    margin-top: 0;
+  }
+
+  .processSlider {
+    margin-top: 0;
+  }
+
+  .slick-prev {
+    display: block;
+    left: 25px !important;
+    z-index: 100 !important;
+  }
+
+  .slick-next {
+    display: block;
+    right: 25px !important;
+    z-index: 100 !important;
+  }
+
+  .slick-dots {
+    transform: translateY(-20px);
+  }
+
+  .slideTitle-wrapper {
+    margin-top: 0;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .slideTitle {
+    text-align: center;
+    transform: rotate(-90deg);
+  }
+
+  .slideDate {
+    text-align: center;
+  }
+
+  .slideCaption {
+    margin-top: 20px;
+  }
+
+  .highlightReelTitle {
+    margin-top: 0;
+  }
+
+  .hide {
+    display: block;
+  }
+
+  .hide-medium {
+    display: none;
+  }
+
+  .hide-small {
+    display: block;
+  }
+
+  .weAreAugment-wrapper {
+    margin-top: 35vh;
+  }
+
+  .whoWeAreImg {
+    height: 250px;
+    width: 100%;
+  }
+
+  .whatIsAugmentImg {
+    height: 200px;
+  }
+
+  .portfolioImg-wrapper {
+    width: 8vw !important;
+    height: 8vw;
+  }
+
+  .portfolioImg {
+    margin-bottom: 50px;
+  }
+
+  .UA_logo {
+    width: 120px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .copywrite {
+    text-align: left;
+    margin-left: 10px;
+    align-self: center;
+  }
+
+  .socials {
+    text-align: right;
+    align-self: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
   .navbar {
     position: fixed;
     transform: translateY(80px) translateX(20px);
     text-align: center;
   }
 
+  .navbar-nav {
+    text-align: justify;
+  }
+
+  .navbar-collapse {
+    background-color: transparent;
+  }
+
   .navbar-brand {
+    width: 30px;
     transform-origin: 0 0;
     transform: translateY(-50px);
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     margin-top: 0px;
   }
 
+  .nav-logo {
+    width: 30px;
+  }
+
+  .nav-item {
+    margin-bottom: 40px;
+  }
+
   .nav-link {
+    font-size: 8pt;
     transform-origin: 0 0;
     transform: rotate(-90deg);
-    margin-bottom: 70px;
   }
 
   .nav-line {
     display: block;
     transform-origin: 0 0;
-    transform: rotate(-90deg) translateY(2px);
+    transform: rotate(-90deg) translateY(-3px);
+  }
+
+  .portfolioImg-wrapper {
+    width: 9vw !important;
+    height: 9vw;
+  }
+
+  .hide-small {
+    display: block;
   }
 }
-/* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .portfolioImg-wrapper {
+    width: 10vw !important;
+    height: 10vw;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

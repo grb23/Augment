@@ -1,8 +1,15 @@
 <DOCTYPE html>
 <html lang="en">
-  <body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+  </head>
+  <body class="pageFade">
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="z-index: 200;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -10,46 +17,166 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav flex-column">
           <li>
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="index.php" alt="Augment Triangle Logo">
+              <img class="nav-logo" src="images/NavTriangeLogo.png">
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Portfolios.php">Portfolios</a>
+            <a class="nav-link active" href="About.php" alt="Link to about page">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Exhibition">Exhibition</a>
+            <a class="nav-link" href="#Exhibition" alt="Link to virtual exhibition">Exhibition</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="About.php">About</a>
+            <a class="nav-link" href="Portfolios.php" alt="Link to student portfolios">Portfolios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" alt="Link to mailing list">Mailing List</a>
           </li>
           <li class="nav-item nav-line">
-            <hr style="border-bottom: solid 2px blue;">
+            <hr style="border-bottom: solid 1px white;">
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container-fluid h-100">
+    <div class="container-fluid h-100 flex-container">
 
-      <div class="row h-100 d-flex justify-content-center" style="background-color: lightgrey;">
-        <div class="col-md-3">
-          <img class="whoWeAreImg" alt="Who we are image" src="">
+      <div class="row">
+
+        <div class="col-12 w-100 d-flex flex-wrap whoWeAre">
+          <div class="col-xs-10 col-sm-10 col-md-3 offset-md-3">
+            <div class="whoWeAreImg" alt="Who we are image"></div>
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-3 offset-md-1">
+            <div class="whoWeAreTitle">
+              Who </br>we are
+            </div>
+            <div class="whoWeAreText">
+              Lorem ipsum dolor sit amet, consectetuer
+              adipiscing elit, sed diam nonummy nibh
+              euismod tincidunt ut laoreet dolore magna
+              aliquam erat volutpat.
+            </div>
+          </div>
+          <div class="col-xs-0 col-sm-0 col-md-2"></div>
         </div>
-        <div class="col-md-3">
-          <div class="whoWeAreText" alt="Who we are image">
-            Who we are...
+
+        <div class="col-12 w-100 d-flex flex-nowrap whatIsAugment mx-auto">
+          <div class="col-xs-4 col-sm-4 col-md-2 offset-md-4 w-100">
+            <div class="whatIsAugmentImg" alt="What is Augment image"></div>
+          </div>
+          <div class="col-xs-5 col-sm-5 col-md-3 offset-md-1">
+            <div class="whatIsAugmentTitle">
+              What is </br>Augment?
+            </div>
+            <div class="whatIsAugmentText">
+              Lorem ipsum dolor sit amet, consectetuer
+              adipiscing elit, sed diam nonummy nibh
+              euismod tincidunt ut laoreet dolore magna
+              aliquam erat volutpat. Ut wisi enim ad
+              minim veniam, quis nostrud exerci tation
+              ullamcorper .
+            </div>
+          </div>
+          <div class="col-md-2 hide-medium"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container-fluid h-100">
+      <div class="row d-flex w-100 justify-content-center">
+
+        <div class="slideTitle-wrapper">
+          <div class="slideTitle">
+            The Process
           </div>
         </div>
+
+        <div class="col-xs-10 col-sm-10 col-md-7 processSlider">
+
+          <div class="slider-wrapper">
+            <div class="col-xs-4 col-sm-4 col-md-3 offset-md-4 slideDate">
+              Date
+            </div>
+            <div class="sliderPhoto-wrapper">
+              <img class="sliderPhoto" src="images/1.jpeg">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-3 slideCaption">
+              Caption goes here...
+            </div>
+          </div>
+
+          <div class="slider-wrapper">
+            <div class="col-xs-4 col-sm-4 col-md-3 offset-md-4 slideDate">
+              Date
+            </div>
+            <div class="sliderPhoto-wrapper">
+              <img class="sliderPhoto" src="images/1.jpeg">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-3 slideCaption">
+              Caption goes here...
+            </div>
+          </div>
+
+          <div class="slider-wrapper">
+            <div class="col-xs-4 col-sm-4 col-md-3 offset-md-4 slideDate">
+              Date
+            </div>
+            <div class="sliderPhoto-wrapper">
+              <img class="sliderPhoto" src="images/1.jpeg">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-3 slideCaption">
+              Caption goes here...
+            </div>
+          </div>
+
+          <div class="slider-wrapper">
+            <div class=" col-xs-4 col-sm-4 col-md-3 offset-md-4 slideDate">
+              Date
+            </div>
+            <div class="sliderPhoto-wrapper">
+              <img class="sliderPhoto" src="images/1.jpeg">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-3 slideCaption">
+              Caption goes here...
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid" style="margin-top: 10vh; margin-bottom: 25vh;">
+
+    <div class="row w-100 justify-content-center my-auto">
+      <div class="col-xs-10 col-sm-10 col-md-8 highlightReelTitle">Augment 2020 Highlight Reel</div>
+    </div>
+
+    <div class="row d-flex w-100 justify-content-center my-auto">
+
+      <div class="col-xs-10 col-sm-10 col-md-8">
+        <video width="100%" controls>
+          <source src="images/Augment2020HighlightReel.mp4" type="video/mp4">
+        </video>
       </div>
 
     </div>
-
-    <div class="container-fluid h-100">
-
-      <div class="row h-100 d-flex justify-content-center" style="background-color: lightgrey;">
-
-      </div>
-
-    </div>
+  </div>
 
   </body>
 </html>
+
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.processSlider').slick({
+      dots: true,
+      adaptiveHeight: true
+    });
+  });
+</script>

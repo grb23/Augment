@@ -1,56 +1,104 @@
 <DOCTYPE html>
 <html lang="en">
-  <body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body class="pageFade">
 
-    <div class="container-fluid h-100">
-
-      <div class="row h-100 d-flex justify-content-center" style="background-color: lightgrey;">
-
-        <div class="col-xs-10 col-md-6 my-auto">
-          <img class="fullSizeLogo" alt="Augment Full Size Logo" src="">
+    <div id="loading" class="container-fluid h-100 background">
+      <div class="row h-100 d-flex justify-content-center">
+        <div class="my-auto">
+          <img class="loadingTriangle" alt="Rotating Augment triangle logo gif" src="images/TriangleLogo_White.gif">
         </div>
-
       </div>
-
-      <div class="row d-flex justify-content-center">
-
-        <div class="col-xs-2" style="margin-top: -75px;">
-          <img class="arrow" alt="Bouncing Arrow" src="">
-        </div>
-
-      </div>
-
     </div>
 
-    <div class="container-fluid h-100 flex-container" style="background-color: grey;">
+    <div id=page class="page pageFade">
 
-      <div class="row d-flex justify-content-center row-flex">
-        <div class="col-xs-4 col-sm-4 col-md-2">
-          <img class="triangleLogo" alt="Augment Triangle Logo" src="">
+      <div class="container-fluid h-100">
+
+        <div class="row h-100 d-flex justify-content-center">
+
+          <div class="col-xs-10 col-md-6 my-auto">
+            <img class="fullSizeLogo" alt="Augment Full Size Logo" src="images/AugmentHeader_Main.png">
+          </div>
+
         </div>
+
+        <div class="row d-flex justify-content-center">
+
+          <div class="col-xs-2" style="margin-top: -75px;">
+            <img class="arrow" alt="Bouncing Arrow" src="images/arrow.png">
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="row d-flex justify-content-center row-flex">
-        <div class="col-xs-10 col-sm-10 col-md-4 introText">
-          Introductory Text
-        </div>
-      </div>
+      <div class="container-fluid h-100 flex-container">
 
-      <div class="row d-flex justify-content-center flex-wrap quickLinks">
-        <div class="col-xs-4 col-sm-4 col-md-2 link-wrapper">
-          <a class="col-xs-4 col-sm-4 col-md-2 link-wrapper portfoliosLink" href="#Portfolios">Portfolios</a>
+        <div class="row d-flex justify-content-center row-flex">
+          <div class="col-xs-4 col-sm-4 col-md-2 mx-auto">
+            <img class="triangleLogo" alt="Augment Triangle Logo" src="images/AugmentTriangleLogo_lg.png">
+          </div>
         </div>
 
-        <div class="col-xs-4 col-sm-4 col-md-2 link-wrapper">
-          <a class="exhibitionLink" href="#Exhibition">Exhibition</a>
+        <div class="row d-flex justify-content-center row-flex">
+          <div class="col-xs-10 col-sm-10 col-md-4 mx-auto">
+            <div class="introTitle">Who We Are</div>
+            <div class="introText">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat.
+            </div>
+          </div>
         </div>
 
-        <div class="col-xs-4 col-sm-4 col-md-2 link-wrapper">
-          <a class="aboutLink" href="About.php">About</a>
+        <div class="row d-flex justify-content-center flex-wrap quickLinks">
+          <div class="col-xs-4 col-sm-4 col-md-2 link-wrapper">
+            <a class="portfoliosLink" href="Portfolios.php" alt="Link to student portfolios">Portfolios</a>
+          </div>
+
+          <div class="col-xs-4 col-sm-4 col-md-2 link-wrapper">
+            <a class="exhibitionLink" href="#Exhibition" alt="Link to virtual exhibition">Exhibition</a>
+          </div>
+
+          <div class="col-xs-4 col-sm-4 col-md-2 link-wrapper">
+            <a class="aboutLink" href="About.php" alt="Link to about page">About</a>
+          </div>
         </div>
+
       </div>
 
     </div>
 
   </body>
+
 </html>
+
+<script>
+  function onReady(callback) {
+    var intervalId = window.setInterval(function() {
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }, 7750);
+  }
+
+  function setVisible(selector, visible) {
+    document.querySelector(selector).style.display = visible ? 'block' : 'none';
+  }
+
+  onReady(function() {
+    setVisible('.page', true);
+    setVisible('#loading', false);
+
+    document.getElementById("page").animate([
+      // keyframes
+      { opacity: '0' },
+      { opacity: '1' }
+    ], {
+      // timing options
+      duration: 700
+    });
+  });
+</script>
